@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/Jordan-18/notif/issues"
   },
-  "homepage": "https://github.com/Jordan-18/notif#readme"
+  "homepage": "https://github.com/Jordan-18/notif#readme",
+  "dependencies": {
+    "body": "^5.1.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "parser": "^0.1.4"
+  }
 }

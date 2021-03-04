@@ -1,0 +1,23 @@
+{
+  "name": "wsnotif",
+  "version": "1.0.0",
+  "description": "api notif",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jordan-18/notif.git"
+  },
+  "keywords": [
+    "notif",
+    "nodejs"
+  ],
+  "author": "Jordan-18",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jordan-18/notif/issues"
+  },
+  "homepage": "https://github.com/Jordan-18/notif#readme"
+}

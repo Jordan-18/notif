@@ -49,3 +49,54 @@ exports.postnotif = function(req,res){
         }
     });
 };
+
+// mengubah data berdasarkan id
+exports.notifterbaca = function(req,res){
+    let id = req.params.id;
+
+    connection.query('UPDATE notif SET sudah_terbaca = 1 WHERE notif.id=?',[id],
+    function(error,rows,fileds){
+        if (error) {
+            console.log(error)
+        }else{
+            respone.ok("Data Telah Terbaca",res)
+        }
+    });
+};
+
+// mengubah data terbaca secara seluruh
+exports.Setreadall = function(req,res){
+    connection.query('UPDATE notif SET sudah_terbaca = 1',
+    function(error,rows,fileds){
+        if (error) {
+            console.log(error)
+        }else{
+            respone.ok("Data Telah Terbaca Semua",res)
+        }
+    });
+};
+
+// mengubah data belum terbaca secara seluruh
+exports.Setunreadall = function(req,res){
+    connection.query('UPDATE notif SET sudah_terbaca = 0',
+    function(error,rows,fileds){
+        if (error) {
+            console.log(error)
+        } else {
+            respone.ok("Data Belum Terbaca",res)
+        }
+    })
+}
+
+// menghapus data 
+exports.hapusnotif = function(req,res){
+    let id = req.params.id;
+    connection.query('DELETE FROM notif WHERE notif.id=?',[id],
+    function(error, rows, fileds){
+        if (error) {
+            console.log(error)
+        } else {
+            respone.ok("Data Telah Terhapus",res)
+        }
+    });
+};

@@ -16,5 +16,21 @@ module.exports = function(app){
 
 //  post data
     app.route('/tambah')
-        .get(jsonku.postnotif);
+        .post(jsonku.postnotif);
+
+//  ubah terbaca
+    app.route('/read/:id')
+        .put(jsonku.notifterbaca);
+        
+//  ubah terbaca semua
+    app.route('/readall')
+        .put(jsonku.Setreadall);
+
+//  set belum terbaca semua
+    app.route('/unreadall')
+        .put(jsonku.Setunreadall);
+
+//  hapus notif
+    app.route('/hapus/:id')
+        .delete(jsonku.hapusnotif)
 }

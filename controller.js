@@ -30,3 +30,22 @@ exports.getallnotifbyid = function(req,res){
             }
         });
 };
+
+// menambahkan data dengan post
+exports.postnotif = function(req,res){
+    var id = req.body.id;
+    var nim = req.body.nim;
+    var penerima = req.body.penerima;
+    var pesan = req.body.pesan;
+    var waktu = new Date()
+    var sudah_terbaca = req.body.sudah_terbaca;
+
+    connection.query('INSERT INTO notif (id,nim,penerima,pesan,waktu,sudah_terbaca) VALUES(?,?,?,?,?,?)',[id,nim,penerima,pesan,waktu,sudah_terbaca],
+    function (error,rows,fileds){
+        if (error) {
+            console.log(error);
+        }else{
+            respone.ok("Berhasil Menambahkan data",res)
+        }
+    });
+};

@@ -5,4 +5,7 @@ module.exports = function(app){
 
     app.route('/')
         .get(jsonku.index);
+
+    app.route('/notifget')
+        .get(jsonku.getallnotif);
 }

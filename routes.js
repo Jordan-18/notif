@@ -6,6 +6,8 @@ module.exports = function(app){
     app.route('/')
         .get(jsonku.index);
 
-    app.route('/notifget')
+    app.route('/notif')
         .get(jsonku.getallnotif);
+    app.route('/notif/:id')
+        .get(jsonku.getallnotifbyid);
 }

@@ -17,3 +17,16 @@ exports.getallnotif = function(req,res){
         }
     });
 };
+
+// menampilkan berdasarkan id
+exports.getallnotifbyid = function(req,res){
+    let id = req.params.id;
+    connection.query('SELECT * FROM notif WHERE id = ?',[id],
+        function(error,rows,fileds){
+            if (error) {
+                console.log(error);
+            }else{
+                respone.ok(rows,res);
+            }
+        });
+};

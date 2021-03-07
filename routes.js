@@ -11,7 +11,7 @@ module.exports = function(app){
         .get(jsonku.getallnotif);
 
 //  getdata by id
-    app.route('/notif/:id')
+    app.route('/notif/get')
         .get(jsonku.getallnotifbyid);
 
 //  post data
@@ -31,6 +31,6 @@ module.exports = function(app){
         .put(jsonku.Setunreadall);
 
 //  hapus notif
-    app.route('/hapus/:id')
+    app.route('/hapus')
         .delete(jsonku.hapusnotif)
 }

@@ -1,0 +1,10 @@
+{
+	"host": "localhost",
+	"port": 3306,
+	"database": "siakadunida_simak",
+	"user": "admin",
+	"password": "admin1988",
+	"connectionLimit": 10,
+	"dateStrings": "true"
+	
+}

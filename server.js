@@ -1,6 +1,9 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const app = express();
+const appConfig = require('./app.json');
+
+const express = require('express'),
+  app = express(),
+  bodyParser = require('body-parser');
+  port = process.env.PORT || appConfig.port;
 
 // parse application/json
 app.use(bodyParser.urlencoded({extended: true}));
@@ -11,6 +14,6 @@ var routes = require('./routes');
 routes(app);
 
 
-app.listen(3000, () => {
-    console.log('Server started on port');
+app.listen(port, () => {
+    console.log('Service NOTIF started on: ' + port)
 });
